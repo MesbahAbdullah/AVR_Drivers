@@ -14,4 +14,4 @@ void ESP8266_voidConnectToSrvTcp ( u8 * Copy_u8Domain , u8 * Copy_u8Port );
 void ESP8266_voidSendHttpReq     ( u8 * Copy_u8Key , u8 * Copy_u8Data , u8 * Copy_u8Length );
 u8   ESP8266_u8ReceiveHttpReq    ( u8 * Copy_u8ChannelID , u8 * Copy_u8Length );
 
-#endif // !ESP_INTERFACE_H
+#endif 

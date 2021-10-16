@@ -17,4 +17,4 @@
 #define SFIOR             (*(volatile u8*) 0x50 )
 #define ADC_VAL           (*(volatile u8*) 0x24 )  
 
-#endif //  !ADC_PRIVATE_H
+#endif

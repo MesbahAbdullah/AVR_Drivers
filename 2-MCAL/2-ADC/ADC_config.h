@@ -55,4 +55,4 @@
 /*********************************************************/
 #define   ADC_CONVERSION_TRIGGER       AUTO_RUNNING_MODE   
 
-#endif // !ADC_CONFIG_H
+#endif 

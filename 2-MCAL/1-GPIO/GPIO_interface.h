@@ -46,4 +46,4 @@ void GPIO_voidSetPullUps       ( u8 Copy_u8Port , u8 Copy_u8Pin                 
 u8   GPIO_u8GetPinValue        ( u8 Copy_u8Port , u8 Copy_u8Pin                   );
 
 
-#endif /*GPIO_INTERFACE_H*/
+#endif 

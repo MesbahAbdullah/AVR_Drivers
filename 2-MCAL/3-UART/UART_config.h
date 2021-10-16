@@ -76,4 +76,4 @@
 /*********************************************************/
 #define UDR_INTERRUPT DISABLE_UDR_INTERRUPT
 
-#endif // !UART_CONFIG_H
+#endif

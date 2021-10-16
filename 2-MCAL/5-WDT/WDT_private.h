@@ -16,4 +16,4 @@
 
 #define WDTCR    *((volatile u8*) 0x21)
 
-#endif // !WDT_PRIVATE_H
+#endif 

@@ -62,4 +62,4 @@ void UART_voidSendString  (u8 * Copy_ptrString  );
 void UART_voidReceveString(u8 * Copy_u8DataString );
 
 
-#endif // !UART_INTERFACE_H
+#endif 

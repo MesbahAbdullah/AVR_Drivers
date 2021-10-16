@@ -22,4 +22,4 @@
 
 #define WDT_TIME 2
 
-#endif /* WDT_CONFIG_H */
+#endif 

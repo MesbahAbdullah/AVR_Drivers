@@ -45,4 +45,4 @@ void ADC_voidInit(void);
 u16 ADC_u16ReadChannel(u8 copy_channelNumber);
 
 
-#endif // !ADC_INTERFACE_H
+#endif 
