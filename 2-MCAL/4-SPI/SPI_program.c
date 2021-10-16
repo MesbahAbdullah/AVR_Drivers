@@ -16,13 +16,13 @@
 void SPI_voidInitMaster()
 {
 
-    GPIO_voidSetPinDirection(GPIO_PORTB, PIN4, OUTPUT); //SS   PIN
-    GPIO_voidSetPinDirection(GPIO_PORTB, PIN5, OUTPUT); //MOSI PIN
-    GPIO_voidSetPinDirection(GPIO_PORTB, PIN6, INPUT);  //MISO PIN
-    GPIO_voidSetPinDirection(GPIO_PORTB, PIN7, OUTPUT); //SCK  PIN
+    GPIO_voidSetPinDirection(GPIO_PORTB, PIN4, OUTPUT); /* SS   PIN */
+    GPIO_voidSetPinDirection(GPIO_PORTB, PIN5, OUTPUT); /* MOSI PIN */
+    GPIO_voidSetPinDirection(GPIO_PORTB, PIN6, INPUT);  /* MISO PIN */
+    GPIO_voidSetPinDirection(GPIO_PORTB, PIN7, OUTPUT); /* SCK  PIN */
 
-    SET_BIT(SPCR, 6); // ENABLE SPI MODULE
-    SET_BIT(SPCR, 4); // MASTER MODE
+    SET_BIT(SPCR, 6); /* ENABLE SPI MODULE */
+    SET_BIT(SPCR, 4); /* MASTER MODE       */
 
 #if SPI_INTERRUPT_MODE == ENABLE_SPI_INTERRUPT
 
@@ -93,10 +93,10 @@ void SPI_voidInitMaster()
 void SPI_voidInitSlave()
 {
 
-    GPIO_voidSetPinDirection(GPIO_PORTB, PIN4, INPUT);  //SS   PIN
-    GPIO_voidSetPinDirection(GPIO_PORTB, PIN5, INPUT);  //MOSI PIN
-    GPIO_voidSetPinDirection(GPIO_PORTB, PIN6, OUTPUT); //MISO PIN
-    GPIO_voidSetPinDirection(GPIO_PORTB, PIN7, INPUT);  //SCK  PIN
+    GPIO_voidSetPinDirection(GPIO_PORTB, PIN4, INPUT);  /* SS   PIN */
+    GPIO_voidSetPinDirection(GPIO_PORTB, PIN5, INPUT);  /* MOSI PIN */
+    GPIO_voidSetPinDirection(GPIO_PORTB, PIN6, OUTPUT); /* MISO PIN */
+    GPIO_voidSetPinDirection(GPIO_PORTB, PIN7, INPUT);  /* SCK  PIN */
 
     /* CHOOSE SLAVE MODE */
     CLR_BIT(SPCR, 4);
@@ -173,12 +173,14 @@ void SPI_voidInitSlave()
 void SPI_voidSendByte(u8 Copy_u8Data)
 {
     SPDR = Copy_u8Data;
-    while (GET_BIT(SPSR, 7) == 0);
+    while (GET_BIT(SPSR, 7) == 0)
+        ;
 }
 
 u8 SPI_u8ReceiveByte()
 {
-    while (GET_BIT(SPSR, 7) == 0);
+    while (GET_BIT(SPSR, 7) == 0)
+        ;
     return SPDR;
 }
 
@@ -206,7 +208,8 @@ u8 SPI_SendReceiveSynch(u8 Copy_u8DataToTransmit)
 {
     SPDR = Copy_u8DataToTransmit;
     /*  wait busy flage to finish*/
-    while (GET_BIT(SPSR, 7) == 0);
+    while (GET_BIT(SPSR, 7) == 0)
+        ;
     /* Return to receive data */
     return SPSR;
 }

@@ -46,4 +46,4 @@ void SPI_voidSendReceiveSynch(u8 Copy_u8DataToTransmit,u8 *Copy_DataToReceive);
 
 u8 SPI_SendReceiveSynch(u8 Copy_u8DataToTransmit);
 
-#endif // !SPI_INTERFACE_H
+#endif

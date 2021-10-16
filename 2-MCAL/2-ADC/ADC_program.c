@@ -16,7 +16,7 @@
 
 void ADC_voidInit(void)
 {
-	ADMUX = 0;    /* initial value for ADMUX */
+	ADMUX = 0; /* initial value for ADMUX */
 
 #if ADC_VOLTAGE_REFERNCE == AVCC_SOURCE
 
@@ -83,7 +83,7 @@ void ADC_voidInit(void)
 	SET_BIT(ADCSRA, 3);
 #endif
 
-	//Enable  ADC
+	/* Enable  ADC */
 	SET_BIT(ADCSRA, 7);
 }
 
