@@ -8,7 +8,7 @@
 #ifndef WDT_INTERFACE_H
 #define WDT_INTERFACE_H
 
-void WDT_voidON(void);
-void WDT_voidOFF(void);
+void WDT_voidON ();
+void WDT_voidOFF();
 
 #endif 

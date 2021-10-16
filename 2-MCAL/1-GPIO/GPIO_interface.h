@@ -28,15 +28,15 @@
 #define PIN7    7
 #define PIN8    8
 #define PIN9    9
-#define PIN10    10
-#define PIN11    11
-#define PIN12    12
-#define PIN13    13
-#define PIN14    14
-#define PIN15    15
+#define PIN10   10
+#define PIN11   11
+#define PIN12   12
+#define PIN13   13
+#define PIN14   14
+#define PIN15   15
 
-#define INPUT    0
-#define OUTPUT   1
+#define INPUT   0
+#define OUTPUT  1
 
 
 void GPIO_voidSetPinDirection  ( u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8DIR   );
@@ -44,6 +44,5 @@ void GPIO_voidSetPortDirection ( u8 Copy_u8Port , u8 Copy_u8DIR                 
 void GPIO_voidSetPinValue      ( u8 Copy_u8Port , u8 Copy_u8Pin , u8 Copy_u8Value );
 void GPIO_voidSetPullUps       ( u8 Copy_u8Port , u8 Copy_u8Pin                   );
 u8   GPIO_u8GetPinValue        ( u8 Copy_u8Port , u8 Copy_u8Pin                   );
-
 
 #endif 

@@ -4,10 +4,11 @@
 /* Version     : V01                                     */
 /* Brief       : ESP8266 driver                          */
 /*********************************************************/
+
 #ifndef ESP_INTERFACE_H
 #define ESP_INTERFACE_h
 
-void ESP8266_voidInit(void);
+void ESP8266_voidInit();
 u8   ESP8266_u8ValidateCmd();
 void ESP8266_voidConnectToWiFi   ( u8 * SSID , u8 * Password );
 void ESP8266_voidConnectToSrvTcp ( u8 * Copy_u8Domain , u8 * Copy_u8Port );

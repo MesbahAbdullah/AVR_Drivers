@@ -8,7 +8,6 @@
 #ifndef ADC_CONFIG_H
 #define ADC_CONFIG_H
 
-
 /*********************************************************/
 /* 1-AREF_SOURCE                                         */
 /* 2-AVCC_SOURCE                                         */

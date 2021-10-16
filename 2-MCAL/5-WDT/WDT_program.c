@@ -4,6 +4,7 @@
 /* Version     : V01                                     */
 /* Brief       : WDT driver                              */
 /*********************************************************/
+
 #include "BIT_MATH.h"
 #include "STD_TYPES.h"
 
