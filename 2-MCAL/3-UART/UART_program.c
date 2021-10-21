@@ -14,7 +14,7 @@
 #include "UART_private.h"
 #include "UART_config.h"
 
-void UART_voidInt()
+void UART_voidInit()
 {
 
 	SET_BIT(UCSRB, 3);

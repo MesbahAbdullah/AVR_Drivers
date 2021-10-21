@@ -15,7 +15,7 @@
 #include "UART_config.h"
 #include "GPIO_interface.h"
 
-void UART_voidInt();
+void UART_voidInit();
 
 void UART_voidSendByte(u8 Copy_u8Data);
 u8   UART_u8ReceveByte();
