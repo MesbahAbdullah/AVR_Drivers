@@ -10,6 +10,6 @@
 
 #define DHT11_PIN 4
 
-void DHT11_VidStart(void);
+void DHT11_voidStart(void);
 
 #endif 

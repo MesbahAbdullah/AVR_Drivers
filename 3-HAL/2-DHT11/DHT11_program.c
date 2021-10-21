@@ -27,7 +27,7 @@ void Request()
 /* receive response from DHT11 */
 void Response()
 {
-	WDT_VidON();
+	WDT_voidON();
 	GPIO_voidSetPinDirection(GPIO_PORTD, DHT11_PIN, INPUT); /* set pin as input */
 	while (GPIO_u8GetPinValue(GPIO_PORTD,DHT11_PIN))
 		;
@@ -35,7 +35,7 @@ void Response()
 		;
 	while (GPIO_u8GetPinValue(GPIO_PORTD,DHT11_PIN))
 		;
-	WDT_VidOFF();
+	WDT_voidOFF();
 }
 
 u8 Receive_data() /* receive data */
@@ -57,16 +57,16 @@ u8 Receive_data() /* receive data */
 	return c;
 }
 
-void DHT11_VidStart(void)
+void DHT11_voidStart(void)
 {
 	char data[5];
 	u8 I_RH, D_RH, I_Temp, D_Temp, CheckSum;
-	UART_VidSendString("Humidity =");
-	UART_VidSendString("Temp = ");
+	UART_voidSendString("Humidity =");
+	UART_voidSendString("Temp = ");
 
 	Request();	/* send start pulse */
 	Response(); /* receive response */
-	GPIO_VidSetPinValue(GPIO_PORTC, PIN7, LOW);
+	GPIO_voidSetPinValue(GPIO_PORTC, PIN7, LOW);
 
 	I_RH = Receive_data();	   /* store first eight bit in I_RH    */
 	D_RH = Receive_data();	   /* store next eight bit in D_RH     */
@@ -76,30 +76,30 @@ void DHT11_VidStart(void)
 
 	if ((I_RH + D_RH + I_Temp + D_Temp) != CheckSum)
 	{
-		UART_VidSendString("Error");
+		UART_voidSendString("Error");
 	}
 
 	else
 	{
 		itoa(I_RH, data, 10);
-		UART_VidSendString(data);
-		UART_VidSendString(".");
+		UART_voidSendString(data);
+		UART_voidSendString(".");
 
 		itoa(D_RH, data, 10);
-		UART_VidSendString(data);
-		UART_VidSendString("%");
+		UART_voidSendString(data);
+		UART_voidSendString("%");
 
 		itoa(I_Temp, data, 10);
-		UART_VidSendString(data);
-		UART_VidSendString(".");
+		UART_voidSendString(data);
+		UART_voidSendString(".");
 
 		itoa(D_Temp, data, 10);
-		UART_VidSendString(data);
-		UART_VidSendString("C ");
+		UART_voidSendString(data);
+		UART_voidSendString("C ");
 
 		itoa(CheckSum, data, 10);
-		UART_VidSendString(data);
-		UART_VidSendString(" ");
+		UART_voidSendString(data);
+		UART_voidSendString(" ");
 	}
 
 	_delay_ms(10);
