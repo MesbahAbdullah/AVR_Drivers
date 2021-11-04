@@ -11,7 +11,13 @@
 #include "GPIO_interface.h"
 #include "GPIO_private.h"
 
-/* seeting the direction of the pin to be input or output */
+/**
+ * @brief seeting the direction of the pin to be input or output
+ *
+ * @param Copy_u8Port
+ * @param Copy_u8Pin
+ * @param Copy_u8DIR
+ */
 void GPIO_voidSetPinDirection(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8DIR)
 {
     switch (Copy_u8Port)
@@ -45,7 +51,12 @@ void GPIO_voidSetPinDirection(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8DIR)
     }
 }
 
-/* seeting the direction of the whole port to input or output */
+/**
+ * @brief seeting the direction of the whole port to input or output
+ *
+ * @param Copy_u8Port
+ * @param Copy_u8DIR
+ */
 void GPIO_voidSetPortDirection(u8 Copy_u8Port, u8 Copy_u8DIR)
 {
     switch (Copy_u8Port)
@@ -79,7 +90,13 @@ void GPIO_voidSetPortDirection(u8 Copy_u8Port, u8 Copy_u8DIR)
     }
 }
 
-/* setting the value to pin to be High or low */
+/**
+ * @brief setting the value to pin to be High or low
+ *
+ * @param Copy_u8Port
+ * @param Copy_u8Pin
+ * @param Copy_u8Value
+ */
 void GPIO_voidSetPinValue(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Value)
 {
     switch (Copy_u8Port)
@@ -113,7 +130,13 @@ void GPIO_voidSetPinValue(u8 Copy_u8Port, u8 Copy_u8Pin, u8 Copy_u8Value)
     }
 }
 
-/* getting the value of pin */
+/**
+ * @brief getting the value of pin
+ *
+ * @param Copy_u8Port
+ * @param Copy_u8Pin
+ * @return u8
+ */
 u8 GPIO_u8GetPinValue(u8 Copy_u8Port, u8 Copy_u8Pin)
 {
     u8 LOC_u8Result = 0;
@@ -136,7 +159,13 @@ u8 GPIO_u8GetPinValue(u8 Copy_u8Port, u8 Copy_u8Pin)
     }
     return LOC_u8Result;
 }
-/* the internal pullup option */
+
+/**
+ * @brief the internal pullup option
+ *
+ * @param Copy_u8Port
+ * @param Copy_u8Pin
+ */
 void GPIO_voidSetPullUps(u8 Copy_u8Port, u8 Copy_u8Pin)
 {
     switch (Copy_u8Port)
