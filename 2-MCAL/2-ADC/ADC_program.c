@@ -14,6 +14,10 @@
 #include "ADC_private.h"
 #include "ADC_config.h"
 
+/**
+ * @brief Initialization function
+ * 
+ */
 void ADC_voidInit(void)
 {
 	ADMUX = 0; /* initial value for ADMUX */
@@ -87,6 +91,12 @@ void ADC_voidInit(void)
 	SET_BIT(ADCSRA, 7);
 }
 
+/**
+ * @brief Function to read the Analog value from a channel
+ * 
+ * @param copy_channelNumber 
+ * @return u16 the digital value
+ */
 u16 ADC_u16ReadChannel(u8 copy_channelNumber)
 {
 	copy_channelNumber &= 0x07;			/* channel number must be from 0 --> 7 */

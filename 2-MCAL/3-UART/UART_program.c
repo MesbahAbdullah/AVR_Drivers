@@ -14,6 +14,10 @@
 #include "UART_private.h"
 #include "UART_config.h"
 
+/**
+ * @brief UART Initialization
+ * 
+ */
 void UART_voidInit()
 {
 
@@ -160,6 +164,11 @@ void UART_voidInit()
 #endif
 }
 
+/**
+ * @brief fuction to send byte
+ * 
+ * @param Copy_u8Data byte to be sent
+ */
 void UART_voidSendByte(u8 Copy_u8Data)
 {
 	/* Put data into buffer, sends the data */
@@ -167,6 +176,12 @@ void UART_voidSendByte(u8 Copy_u8Data)
 		;
 	UDR = Copy_u8Data;
 }
+
+/**
+ * @brief function to receve byte
+ * 
+ * @return u8 the receded byte
+ */
 u8 UART_u8ReceveByte()
 {
 	/* Wait for data to be received */
@@ -176,6 +191,11 @@ u8 UART_u8ReceveByte()
 	return UDR;
 }
 
+/**
+ * @brief function to send string 
+ * 
+ * @param Copy_ptrString String to send 
+ */
 void UART_voidSendString(u8 *Copy_ptrString)
 {
 
@@ -188,6 +208,12 @@ void UART_voidSendString(u8 *Copy_ptrString)
 		LOC_u8Iterator++;
 	}
 }
+
+/**
+ * @brief function to receve string 
+ * 
+ * @param Copy_u8DataString to strore the received data
+ */
 void UART_voidReceveString(u8 *Copy_u8DataString)
 {
 	u8 LOC_u8Iterator = 0;
