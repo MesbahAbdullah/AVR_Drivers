@@ -13,7 +13,6 @@
 #include "UART_interface.h"
 #include "UART_private.h"
 #include "UART_config.h"
-#include <avr/io.h>
 
 
 /**
