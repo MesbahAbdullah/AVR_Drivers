@@ -123,13 +123,13 @@ u8 GPIO_u8GetPinValue(u8 Copy_u8Port, u8 Copy_u8Pin)
         LOC_u8Result = GET_BIT(PINA, Copy_u8Pin);
         break;
     case GPIO_PORTB:
-        LOC_u8Result = GET_BIT(PINA, Copy_u8Pin);
+        LOC_u8Result = GET_BIT(PINB, Copy_u8Pin);
         break;
     case GPIO_PORTC:
-        LOC_u8Result = GET_BIT(PINA, Copy_u8Pin);
+        LOC_u8Result = GET_BIT(PINC, Copy_u8Pin);
         break;
     case GPIO_PORTD:
-        LOC_u8Result = GET_BIT(PINA, Copy_u8Pin);
+        LOC_u8Result = GET_BIT(PIND, Copy_u8Pin);
         break;
     default:
         break;
